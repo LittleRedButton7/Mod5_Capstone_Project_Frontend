@@ -1,0 +1,65 @@
+
+/*******HEADER********/
+.header{
+    margin-bottom: 2rem;
+    text-align: center;
+    align-content: center;
+}
+
+.Julia-quote{
+    font-weight: 700;
+}
+
+/*******SEARCH-FIELD********/
+.search-form{
+    text-align: center;
+}
+
+.search-text-field{
+    width: 20rem;
+}
+
+/*******RECIPE-CONTAINER********/
+.recipe-card-container{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-flow: row; */
+    justify-content: space-around;
+    
+}
+
+
+
+/*******RECIPE-CARD********/
+.recipe-card{
+    width: 20rem;
+    height: 35rem;
+    margin: 2rem 2rem 2rem 2rem;
+    background-color: lightblue;
+    border-radius: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+.recipe-card > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.recipe-card > ul {
+    text-align: left;
+    font-weight: 700;
+}
+
+.recipe-card > img {
+    border-radius: 1rem;
+}
+
+.recipe-card > button {
+    border-radius: .3rem;
+    font-weight: 300;
+    text-decoration: none;
+}
