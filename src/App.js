@@ -1,27 +1,36 @@
 import './App.css';
 import React, { useState } from 'react';
+import { Route, Link } from 'react-router-dom';
 import RecipeContainer from './Components/RecipeContainer';
-import SearchField from './Components/SearchField';
 import Header from './Components/Header';
+import Login from './Components/LoginForm';
+import Register from './Components/RegistrationForm';
+import RecipeBook from './Components/RecipeBook';
 
 function App() {
-  const [recipeResults, setRecipeResults] = useState([]);
-  // const [searchIngredients, setSearchIngredients] = ([])
 
-  const APP_ID = "4fc555a9";
-  const APP_KEY = "b287f340a47e9e367b3a86a5a2c6501f";
-
-  function getRecipes(query) {
-    fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
-      .then(response => response.json())
-      .then(({hits}) => setRecipeResults(hits)) 
+  const [token, setToken] = useState('');
+  
+  const userLogin = (tok) => {
+    setToken(tok)
   }
   
   return (
     <div className="App">
       <Header className="header"/>
-      <SearchField getRecipes={getRecipes}/>
-      <RecipeContainer recipes={recipeResults}/>
+      {/* <Login userLogin={userLogin}/>
+      <Register /> */}
+      <Route exact path='/'/> 
+      <div className="login-link">
+      <Link to='/login'>Login</Link> 
+      </div>
+      <h3>OR</h3>
+      <div className="register-link">
+      <Link to='/register'>Register Now</Link> 
+      </div>
+      <Route exact path='/login' render={(props) => <Login {...props} userLogin={userLogin} /> } />
+      <Route exact path='/register' render={(props) => <Register {...props} /> } />
+      <RecipeBook token={token} />
     </div>
   );
 }

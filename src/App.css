@@ -1,4 +1,16 @@
-/* .App {
+/* .App > .login {
   text-align: center;
-} */
+  justify-content: center;
+}  */
 
+.login-link{
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.register-link{
+  text-align: center;
+}

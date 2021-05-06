@@ -10,6 +10,17 @@
     font-weight: 700;
 }
 
+
+/*******LOGIN********/
+.login{
+    text-align: center;
+}
+
+/*******REGISTER********/
+.register{
+    text-align: center;
+}
+
 /*******SEARCH-FIELD********/
 .search-form{
     text-align: center;
