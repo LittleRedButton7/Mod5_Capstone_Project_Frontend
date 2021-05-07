@@ -26,8 +26,12 @@ class Login extends Component {
         }).then(data => data.json())
         .then(
             data => {
-                this.userLogin(data.token);
-                console.log(data.token)
+                if(data.non_field_errors){
+                    alert("Login Failed. Please try again.")
+                }else{
+                    this.userLogin(data.token);
+                    console.log(data)
+                }
             }
         )
         .catch(error => console.error(error))
