@@ -14,18 +14,22 @@ export default function SearchField(props) {
     }
 
     return (
-        <div className="search-form">
-            <form onSubmit={handleSubmit}>
-                <input
-                    className="search-text-field"
-                    type='text'
-                    name='ingredients'
-                    onChange={handleChange}
-                    value={query}
-                    placeholder="What do You Have on Hand?"
-                />
-                <input  type="submit" value="Search Recipes"/>
-            </form>
-        </div>
+        <>
+            {localStorage.token ?
+                <div className="search-form">
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            className="search-text-field"
+                            type='text'
+                            name='ingredients'
+                            onChange={handleChange}
+                            value={query}
+                            placeholder="What ingredients do you have on hand?"
+                        />
+                        <input  type="submit" value="Search Recipes"/>
+                    </form>
+                </div> : <h2>Please Login</h2>
+            }
+        </>
     )
 }

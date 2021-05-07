@@ -13,9 +13,9 @@ export default function RecipeContainer() {
     const APP_KEY = "b287f340a47e9e367b3a86a5a2c6501f";
 
     function getRecipes(query) {
-        fetch(`https://api.edamam.com/search?q=${query}&to=45&app_id=${APP_ID}&app_key=${APP_KEY}`)
-        .then(response => response.json())
-        .then(({hits}) => setRecipeResults(hits)) 
+        fetch(`https://api.edamam.com/search?q=${query}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`)
+            .then(response => response.json())
+            .then(({hits}) => setRecipeResults(hits)) 
     }
     
     console.log(recipeResults)
@@ -29,10 +29,10 @@ export default function RecipeContainer() {
 
     return (
         <>
-            <SearchField getRecipes={getRecipes}/>
+            <SearchField getRecipes={getRecipes} />
             <div className="recipe-card-container">{showRecipes()}</div>
             {index > 0 && <button className="previous-page-button" onClick={() => setIndex(index - 15) }>Previous Page</button>}
-            {index < 30 && <button className="next-page-button" onClick={() => setIndex(index + 15) }>Next Page</button>}
+            {index < 85 && <button className="next-page-button" onClick={() => setIndex(index + 15) }>Next Page</button>}
         </>
     )
 }

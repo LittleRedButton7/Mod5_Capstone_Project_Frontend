@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './component.css'
 import { Route, Link } from 'react-router-dom';
+// import LoginRegisterLinks from './LoginRegisterLinks';
 
 class Login extends Component {
     
@@ -9,6 +10,11 @@ class Login extends Component {
             username: '',
             password: ''
         }
+    }
+
+    userLogin = (tok) => {
+        localStorage.setItem('token', tok)
+        this.props.history.push('/search')
     }
 
     login = event => {
@@ -20,7 +26,8 @@ class Login extends Component {
         }).then(data => data.json())
         .then(
             data => {
-                this.props.userLogin(data.token);
+                this.userLogin(data.token);
+                console.log(data.token)
             }
         )
         .catch(error => console.error(error))

@@ -5,6 +5,10 @@ export default function RecipeCard({recipe}) {
     console.log(recipe)
     console.log(recipe.totalNutrients.FAT.quantity)
 
+    // function saveRecipe(clickedRecipe){
+    //     const recipeId = recipe.id
+    // }
+
     return (
         <div className="recipe-card">
             <img src={recipe.image} alt="recipe.name" className="recipe-image"></img>
@@ -17,6 +21,7 @@ export default function RecipeCard({recipe}) {
                 <ul>Recipe Total Protein: {recipe.totalNutrients.PROCNT.quantity.toFixed(0)} g</ul>
                 <ul>Total Servings: {recipe.yield}</ul>
             </ul>
+            <button className="add-recipe-button" >Add to my recipe book</button>
         </div>
     )
 }

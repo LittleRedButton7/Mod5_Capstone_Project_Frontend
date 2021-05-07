@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class RecipeBook extends Component {
     state = {
@@ -10,7 +11,7 @@ export default class RecipeBook extends Component {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Token ${this.props.token}`
+                Authorization: `Token ${localStorage.token}`
             },
             body: JSON.stringify(this.state.credentials)
         }).then(data => data.json())
@@ -24,13 +25,18 @@ export default class RecipeBook extends Component {
     
     render() {
         return (
-            <div>
-                <h1>This is my Recipe Book!</h1>
-                {this.state.recipebooks.map(recipebook => {
-                    return <h3 key={recipebook.id}>{recipebook.title}</h3>
-                })}
-                <button onClick={this.loadRecipes}>Please load my recipes.</button>
-            </div>
+            <>
+                {localStorage.token ?
+                    <div>
+                        <h1>This is my Recipe Book!</h1>
+                        {this.state.recipebooks.map(recipebook => {
+                            return <h3 key={recipebook.id}>{recipebook.title}</h3>
+                        })}
+                        <button onClick={this.loadRecipes}>Please load my recipes.</button>
+                    </div> : <h2>Please Login<Link to='/login'>Login</Link></h2>
+                    // turn into react component with a link to get to login.
+                }
+            </>
         )
     }
 }
