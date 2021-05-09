@@ -1,13 +1,13 @@
 import React from 'react'
 import './component.css'
 
-export default function RecipeCard({recipe}) {
+export default function RecipeCard({recipe, addFavoriteRecipe}) {
     console.log(recipe)
     console.log(recipe.totalNutrients.FAT.quantity)
 
-    // function saveRecipe(clickedRecipe){
-    //     const recipeId = recipe.id
-    // }
+    const handleClick = (event) => {
+        addFavoriteRecipe(recipe)
+    }
 
     return (
         <div className="recipe-card">
@@ -21,7 +21,7 @@ export default function RecipeCard({recipe}) {
                 <ul>Recipe Total Protein: {recipe.totalNutrients.PROCNT.quantity.toFixed(0)} g</ul>
                 <ul>Total Servings: {recipe.yield}</ul>
             </ul>
-            <button className="add-recipe-button" >Add to my recipe book</button>
+            <button className="add-recipe-button" onClick={handleClick} >Add to my recipe book</button>
         </div>
     )
 }

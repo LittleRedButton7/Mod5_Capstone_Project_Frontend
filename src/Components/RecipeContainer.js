@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import RecipeCard from './RecipeCard'
 import SearchField from './SearchField';
+import FavoriteRecipes from './FavoriteRecipes';
 import './component.css'
 
 export default function RecipeContainer() {
     const [index, setIndex] = useState(0)
 
     const [recipeResults, setRecipeResults] = useState([]);
-  // const [searchIngredients, setSearchIngredients] = ([])
+    const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
     const APP_ID = "4fc555a9";
     const APP_KEY = "b287f340a47e9e367b3a86a5a2c6501f";
@@ -20,19 +21,32 @@ export default function RecipeContainer() {
     
     console.log(recipeResults)
 
+    function addFavoriteRecipe(recipe){
+        const foundRecipe = recipeResults.find(rec => rec === recipe)
+        if(!foundRecipe){
+            setFavoriteRecipes(
+                favoriteRecipes.push(recipe)
+            )
+        }
+    }
+
+    console.log(favoriteRecipes)
 
     const showRecipes = () => {
-        return recipeResults.slice(index, index + 15).map(recipe => {
-            return <RecipeCard key={recipe.recipe.name} recipe={recipe.recipe} />
+        return recipeResults.slice(index, index + 16).map(recipe => {
+            return <RecipeCard key={recipe.recipe.name} recipe={recipe.recipe} addFavoriteRecipe={addFavoriteRecipe}/>
         })
     }
 
     return (
         <>
             <SearchField getRecipes={getRecipes} />
+            <FavoriteRecipes addFavoriteRecipe={addFavoriteRecipe} favoriteRecipes={favoriteRecipes}/>
             <div className="recipe-card-container">{showRecipes()}</div>
-            {index > 0 && <button className="previous-page-button" onClick={() => setIndex(index - 15) }>Previous Page</button>}
-            {index < 85 && <button className="next-page-button" onClick={() => setIndex(index + 15) }>Next Page</button>}
+            <div className="button-div">
+                {index > 0 && <button className="previous-page-button" onClick={() => setIndex(index - 16) }>Previous Page</button>}
+                {index < 85 && <button className="next-page-button" onClick={() => setIndex(index + 16) }>Next Page</button>}
+            </div>
         </>
     )
 }

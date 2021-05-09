@@ -62,7 +62,8 @@ class Login extends Component {
                 </label>
                 <br></br>
                 <button onClick={this.login}>Login</button>
-                <Link to="/register">Sign up now!</Link>
+                <br></br>
+                <Link className="link" to="/register">Sign up now!</Link>
             </div>
         )
     }
