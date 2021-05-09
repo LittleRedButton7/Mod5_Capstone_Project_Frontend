@@ -20,6 +20,7 @@ class Register extends Component {
         }).then(data => data.json())
         .then(
             data => {
+                alert("User Create. Please return to Login and login.")
                 console.log(data);
             }
         )
@@ -30,6 +31,7 @@ class Register extends Component {
         const cred = this.state.credentials;
         cred[event.target.name] = event.target.value;
         this.setState({credentials: cred});
+        
     }
     
     render() {
@@ -51,7 +53,8 @@ class Register extends Component {
                 </label>
                 <br></br>
                 <button onClick={this.register}>Sign Up!</button>
-                <Link to="/login">Back to Login</Link>
+                <br></br>
+                <Link className="link" to="/login">Back to Login</Link>
             </div>
         )
     }

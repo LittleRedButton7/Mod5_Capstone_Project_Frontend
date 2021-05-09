@@ -17,6 +17,7 @@ export default function SearchField(props) {
         <>
             {localStorage.token ?
                 <div className="search-form">
+                    <button className="my-recipe-book-button">My Recipe Book</button>
                     <form onSubmit={handleSubmit}>
                         <input
                             className="search-text-field"
@@ -26,7 +27,7 @@ export default function SearchField(props) {
                             value={query}
                             placeholder="What ingredients do you have on hand?"
                         />
-                        <input  type="submit" value="Search Recipes"/>
+                        <input className="search-button" type="submit" value="Search Recipes"/>
                     </form>
                 </div> : <h2>Please Login</h2>
             }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function LoginRegisterLinks() {
     return (
-        <div>
+        <div className="home-page-login-form">
             <div className="login-link">
                     <Link to='/login'>Login</Link> 
                 </div>
