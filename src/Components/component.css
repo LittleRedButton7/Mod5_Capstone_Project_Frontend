@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans&family=Roboto&display=swap');
 
-body{
-    background-image: url("./CookingBackground3.PNG");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 
 /*******HEADER********/
 .header{
@@ -125,6 +119,7 @@ body{
     border-radius: .7rem;
     background-color:rgb(248, 168, 168); 
     margin-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -168,6 +163,7 @@ body{
     border-radius: 1rem;
     margin-left: 10rem;
     background-color:rgb(248, 168, 168);
+
 }
 
 .previous-page-button{
@@ -186,7 +182,7 @@ body{
     width: 23rem;
     height: 40rem;
     margin: 2rem 2rem 2rem 2rem;
-    background-color: lightblue;
+    background-color: rgb(197, 234, 247);
     border-radius: 1rem;
     text-align: center;
     padding-top: 1rem;
