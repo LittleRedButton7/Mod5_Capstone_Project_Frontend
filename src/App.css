@@ -3,6 +3,14 @@
   justify-content: center;
 }  */
 
+body{
+  background-image: url("./Components/CookingBackground3.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
 .login-link{
   text-align: center;
 }

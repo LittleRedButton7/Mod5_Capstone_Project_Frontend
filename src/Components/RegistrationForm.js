@@ -20,7 +20,7 @@ class Register extends Component {
         }).then(data => data.json())
         .then(
             data => {
-                alert("User Create. Please return to Login and login.")
+                alert("User Created. Please return to Login and login.")
                 console.log(data);
             }
         )
