@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {GlobalContext, GlobalProvider} from '../Context/GlobalState';
 import './component.css'
-import FavoriteRecipeControls from './FavoriteRecipeControls';
+import { FavoriteRecipeControls } from './FavoriteRecipeControls';
 // import FavoriteRecipes from './FavoriteRecipes';
 
 export default function RecipeCard({recipe, type}) {
@@ -10,7 +10,7 @@ export default function RecipeCard({recipe, type}) {
 
     const {addRecipeToFavorites, favoriteRecipes} = useContext(GlobalContext)
 
-    let storedRecipe = favoriteRecipes.find(rec => rec.label === recipe.label);
+    let storedRecipe = favoriteRecipes.find(rec => rec.label === recipe.name);
 
     const favoriteButtonDisabled = storedRecipe ? true : false
 
@@ -26,8 +26,8 @@ export default function RecipeCard({recipe, type}) {
                 <ul>Recipe Total Protein: {recipe.totalNutrients.PROCNT.quantity.toFixed(0)} g</ul>
                 <ul>Total Servings: {recipe.yield}</ul>
             </ul>
-            <button className="add-recipe-button" disabled={favoriteButtonDisabled} onClick={() => addRecipeToFavorites(recipe)} >Add to my recipe book</button>
-            {/* <FavoriteRecipes type={type} recipe={recipe} /> */}
+            {/* <button className="add-recipe-button" disabled={favoriteButtonDisabled} onClick={() => addRecipeToFavorites(recipe)} >Add to my recipe book</button> */}
+            <FavoriteRecipeControls type={type} recipe={recipe}/>
         </div>
     )
 }

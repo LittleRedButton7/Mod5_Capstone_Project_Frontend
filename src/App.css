@@ -3,12 +3,18 @@
   justify-content: center;
 }  */
 
-body{
+.App-background-image{
   background-image: url("./Components/CookingBackground3.PNG");
   background-size: cover;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 0;
   /* background-attachment: fixed; */
+}
+
+.App{
+  background-image: linear-gradient(to top left, rgba(193, 248, 122, 0), rgba(250, 238, 73, .7));
 }
 
 .login-link{

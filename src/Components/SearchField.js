@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './component.css'
 
 export default function SearchField(props) {
@@ -17,7 +18,7 @@ export default function SearchField(props) {
         <>
             {localStorage.token ?
                 <div className="search-form">
-                    <button className="my-recipe-book-button">My Recipe Book</button>
+                    <Link to='recipebook'><button className="my-recipe-book-button">My Recipe Book</button></Link>
                     <form onSubmit={handleSubmit}>
                         <input
                             className="search-text-field"
