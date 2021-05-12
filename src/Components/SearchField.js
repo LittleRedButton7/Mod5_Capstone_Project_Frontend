@@ -12,6 +12,7 @@ export default function SearchField(props) {
     function handleSubmit(event) {
         event.preventDefault();
         props.getRecipes(query)
+        event.target.reset();
     }
 
     return (
@@ -25,7 +26,7 @@ export default function SearchField(props) {
                             type='text'
                             name='ingredients'
                             onChange={handleChange}
-                            value={query}
+                            // value={query}
                             placeholder="What ingredients do you have on hand?"
                         />
                         <input className="search-button" type="submit" value="Search Recipes"/>

@@ -20,8 +20,18 @@ export const GlobalProvider = props => {
     }, [state]);
 
     //actions
+    //Do I need to add a url to the Django for this in the urls on the project level?
     const addRecipeToFavorites = (recipe) => {
         dispatch({type: "ADD_RECIPE_TO_FAVORITES", payload: recipe});
+        fetch('http://127.0.0.1:8000/api/recipebooks/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Token ${localStorage.token}`
+            },
+            body: JSON.stringify(recipe)
+        }).then(data => data.json())
+        .then(result => console.log('posted recipe', result))
     }
 
     const removeRecipeFromFavorites = (recipe) => {

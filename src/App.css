@@ -15,6 +15,7 @@
 
 .App{
   background-image: linear-gradient(to top left, rgba(193, 248, 122, 0), rgba(250, 238, 73, .7));
+  height: 100vh;
 }
 
 .login-link{

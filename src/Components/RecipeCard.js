@@ -6,8 +6,9 @@ import FavoriteRecipeControls from './FavoriteRecipeControls';
 
 export default function RecipeCard({recipe, type}) {
     console.log(recipe)
-    console.log(recipe.totalNutrients.FAT.quantity)
+    // console.log(recipe.totalNutrients.FAT.quantity)
 
+    ///post request: 
     const {addRecipeToFavorites, favoriteRecipes} = useContext(GlobalContext)
 
     let storedRecipe = favoriteRecipes.find(rec => rec.label === recipe.label);
@@ -27,7 +28,7 @@ export default function RecipeCard({recipe, type}) {
                 <ul>Total Servings: {recipe.yield}</ul>
             </ul>
             <button className="add-recipe-button" disabled={favoriteButtonDisabled} onClick={() => addRecipeToFavorites(recipe)} >Add to my recipe book</button>
-            {/* <FavoriteRecipes type={type} recipe={recipe} /> */}
+            <button className="flip-button">Flip for full ingredient list.</button>
         </div>
     )
 }
