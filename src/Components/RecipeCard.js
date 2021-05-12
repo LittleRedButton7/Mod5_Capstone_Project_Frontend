@@ -28,7 +28,7 @@ export default function RecipeCard({recipe, type}) {
                 <ul>Total Servings: {recipe.yield}</ul>
             </ul>
             <button className="add-recipe-button" disabled={favoriteButtonDisabled} onClick={() => addRecipeToFavorites(recipe)} >Add to my recipe book</button>
-            <button className="flip-button">Flip for full ingredient list.</button>
+            {/* <button className="flip-button">Flip for full ingredient list.</button> */}
         </div>
     )
 }

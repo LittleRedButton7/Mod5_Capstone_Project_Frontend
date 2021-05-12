@@ -11,6 +11,9 @@ export default function LoginRegisterLinks() {
                 <div className="register-link">
                     <Link to='/register'>Register Now</Link> 
                 </div>
+                <div className="forgot-password-link">
+                    <Link to='/'>Forgot Password</Link> 
+                </div>
         </div>
     )
 }

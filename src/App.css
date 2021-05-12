@@ -1,7 +1,4 @@
-/* .App > .login {
-  text-align: center;
-  justify-content: center;
-}  */
+
 
 .App-background-image{
   background-image: url("./Components/CookingBackground3.PNG");
@@ -13,9 +10,13 @@
   /* background-attachment: fixed; */
 }
 
-.App{
-  background-image: linear-gradient(to top left, rgba(193, 248, 122, 0), rgba(250, 238, 73, .7));
-  height: 100vh;
+.App {
+  background: linear-gradient(to top left, rgba(193, 248, 122, 0), rgba(250, 238, 73, .7));
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0;
 }
 
 .login-link{

@@ -20,6 +20,8 @@ function App({location: {pathname}, history}) {
     localStorage.token && setIsLoggedIn(true)
   }, [])
 
+  console.log(pathname)
+
   return (
     <GlobalProvider>
       <div className={showBackground ? "App-background-image" : "App"} >
