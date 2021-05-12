@@ -6,6 +6,7 @@
 /*******HEADER********/
 .header{
     margin-bottom: 2rem;
+    padding-top: 5rem;
     text-align: center;
     align-content: center;
     font-family: 'Berkshire Swash', cursive; 
@@ -23,7 +24,7 @@
     text-align: center;
     box-shadow: 5px 5px 3px #afafaf;
     border-radius: .5rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     background-color:rgb(248, 168, 168);
 }
 
@@ -35,12 +36,15 @@
     width: 20rem;
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     background-color: rgb(248, 168, 168);
+    border: solid;
+    border-width: .15rem;
+    border-color: rgb(192, 191, 191);
     border-radius: 1rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10rem;
+    margin-top: 7rem;
     box-shadow: 5px 5px 3px #afafaf;
 }
 
@@ -50,13 +54,24 @@
 .login{
     text-align: center;
     font-family: 'Berkshire Swash';
+    margin-top: 3rem;
 }
 
 .login > label {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    font-weight: 800;
+    margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+.login > label > input {
+    border-radius: .3rem;
+    height: 1.5rem;
+    width: 12rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 520;
 }
 
 .login > button {
@@ -67,36 +82,55 @@
     font-size: 1.5rem;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    border-radius: .3rem;
+    background-color: rgb(253, 216, 216);
 }
 
 .login > .link{
     font-size: 1.5rem;
 }
 
+.forgot-password-link{
+    font-size: 1.2rem;
+    margin-top: 5rem;
+}
+
 /*******REGISTER********/
 .register{
     text-align: center;
     font-family: 'Berkshire Swash';
+    margin-top: 3rem;
 }
 
 .register > label {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    font-weight: 800;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
+.register > label > input {
+    border-radius: .3rem;
+    height: 1.5rem;
+    width: 12rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 520;
+}
 .register > button {
     height: 3rem;
-    width: 5rem;
+    width: 7rem;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     overflow: auto;
+    border-radius: .3rem;
+    background-color: rgb(253, 216, 216);
 }
 
 .register > .link{
@@ -146,6 +180,7 @@
 
 /*******RECIPE-CONTAINER********/
 .recipe-card-container{
+    /* background: linear-gradient(to top left, rgba(193, 248, 122, 0), rgba(250, 238, 73, .7)); */
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
@@ -157,6 +192,9 @@
 .recipe-card-container > button{
     text-align: center;
     align-content: center;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: .3rem;
+    background-color: rgb(253, 216, 216);
 }
 
 .button-div{
@@ -200,11 +238,17 @@
     margin: 2rem 2rem 2rem 2rem;
     background-color: rgb(197, 234, 247);
     border-radius: 1rem;
+    border: solid;
+    border-width: .15rem;
+    border-color: rgb(192, 191, 191);
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
     overflow: hidden;
     box-shadow: 5px 5px 3px #afafaf;
+    padding-bottom: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 
@@ -214,6 +258,8 @@
     font-weight: 600;
     font-size: 1.3rem;
     text-align: center;
+    padding-right: .3rem;
+    padding-left: .3rem;
 }
 
 .recipe-card > ul {
@@ -230,14 +276,25 @@
 .recipe-card > button {
     height: 3rem;
     width: 7rem;
+    background-color: rgb(253, 235, 235);
     border:rgb(43, 42, 42), .2rem;
     border-radius: .3rem;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
     text-decoration: none;
+    padding-bottom: 3rem;
 }
 
+.recipe-card > button > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
 
+/* .add-recipe-button{
+    margin-bottom: rem;
+} */
 /*******FAVORITE-RECIPES********/
 .favorites-highest-div{
     text-align: center;
@@ -266,11 +323,14 @@
 }
 
 .control-button{
-    height: 3rem;
-    width: 7rem;
+    height: 4rem;
+    width: 8rem;
+    background-color: rgb(253, 235, 235);
     border:rgb(43, 42, 42), .2rem;
     border-radius: .3rem;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
     text-decoration: none;
+    /* padding-top: .5rem; */
 }
