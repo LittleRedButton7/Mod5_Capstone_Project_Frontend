@@ -14,8 +14,11 @@ class Login extends Component {
 
     userLogin = (tok) => {
         localStorage.setItem('token', tok)
+        this.props.setIsLoggedIn(true)
         this.props.history.push('/search')
     }
+
+
 
     login = event => {
         console.log(this.state.credentials);

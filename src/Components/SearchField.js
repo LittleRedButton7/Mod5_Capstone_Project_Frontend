@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './component.css'
 
 export default function SearchField(props) {
@@ -11,20 +12,21 @@ export default function SearchField(props) {
     function handleSubmit(event) {
         event.preventDefault();
         props.getRecipes(query)
+        event.target.reset();
     }
 
     return (
         <>
             {localStorage.token ?
                 <div className="search-form">
-                    <button className="my-recipe-book-button">My Recipe Book</button>
+                    <Link to='recipebook'><button className="my-recipe-book-button">My Recipe Book</button></Link>
                     <form onSubmit={handleSubmit}>
                         <input
                             className="search-text-field"
                             type='text'
                             name='ingredients'
                             onChange={handleChange}
-                            value={query}
+                            // value={query}
                             placeholder="What ingredients do you have on hand?"
                         />
                         <input className="search-button" type="submit" value="Search Recipes"/>

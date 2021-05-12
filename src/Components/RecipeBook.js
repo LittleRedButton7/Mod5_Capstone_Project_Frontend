@@ -7,7 +7,7 @@ export default class RecipeBook extends Component {
     }
     
     loadRecipes = () => {
-        fetch('http://127.0.0.1:8000/Mod5_backend_app/recipebooks/', {
+        fetch('http://127.0.0.1:8000/api/recipebooks/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

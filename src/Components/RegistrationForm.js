@@ -24,7 +24,7 @@ class Register extends Component {
                 console.log(data);
             }
         )
-        .catch(error => console.error(error))
+        .catch(error => alert("Username already exists. Please try again."))
     }
 
     inputChanged = event => {
