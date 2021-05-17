@@ -44,7 +44,8 @@ export default function RecipeCard({recipe, type}) {
                         {/* <button className="hover-button" for="change">Click for Ingredients</button>                 */}
                     </div>
                     <div className="flip-card-back">
-                        <h1>{mappedIngredients(recipe)}</h1>
+                        <h1>{recipe.label}</h1>
+                        <h2>{mappedIngredients(recipe)}</h2>
                         <button className="toggle-to"><a href={recipe.url}>See Full Recipe</a></button>
                         <button className="add-recipe-button" disabled={favoriteButtonDisabled} onClick={() => addRecipeToFavorites(recipe)} >Add to my recipe book</button>
                         {/* <button className="toggle-back">Flip Back</button> */}

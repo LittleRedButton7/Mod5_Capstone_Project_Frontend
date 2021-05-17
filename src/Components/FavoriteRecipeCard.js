@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import {GlobalContext, GlobalProvider} from '../Context/GlobalState';
 import './component.css'
 import { FavoriteRecipeControls } from './FavoriteRecipeControls';
-// import FavoriteRecipes from './FavoriteRecipes';
 
 export default function RecipeCard({recipe, type}) {
     console.log(recipe)
@@ -26,7 +25,6 @@ export default function RecipeCard({recipe, type}) {
                 <ul>Recipe Total Protein: {recipe.totalNutrients.PROCNT.quantity.toFixed(0)} g</ul>
                 <ul>Total Servings: {recipe.yield}</ul>
             </ul>
-            {/* <button className="add-recipe-button" disabled={favoriteButtonDisabled} onClick={() => addRecipeToFavorites(recipe)} >Add to my recipe book</button> */}
             <FavoriteRecipeControls type={type} recipe={recipe}/>
         </div>
     )
