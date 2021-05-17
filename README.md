@@ -12,8 +12,7 @@ Make something with what you have in a pinch!
 * [Contact](#Contact)
 
 ## General Info
-I used an external Dungeons & Dragons API to pull in data on different characters and monsters. My thought was to make a website where you can create a random character and/or a random monster and then save that to your profile. One advantage of accessing the D&D API is that a Dungeon Master could very quickly pull characteristics for an NPC character or a monster during a battle.
-
+I used an external recipe and nutrition API to pull in data on different recipes and include ingredients and nutrition. My thought was to make a website where you can put in a list of ingredients that you have on hand or need to use up and find recipes that match as well as meet your nutritional needs.
 <!-- ## Intro Video
 [Fly Away! on YouTube](https://youtu.be/P52TS0hV62s) -->
 
@@ -26,12 +25,14 @@ I used an external Dungeons & Dragons API to pull in data on different character
 
 
 ## Setup
+* This is the frontend repo. The backend repo can be found [here](https://github.com/LittleRedButton7/Mod5_Capstone_Project_Backend2)  
 * Fork and clone this repo into your local branch.
-<!-- * From the backend, run bundle:install. -->
-* Open in VS code or other text editor.
-* Run npm start which will kick off the app in the localhost:3001.
-*From there, create an account, login and have fun looking up recipes for ingredients that you have on hand. Note that you can see a list of all the ingredients on the back of the recipe cards.
-*You can also save a recipe to your recipe book to find later. 
+* From the backend, open up the api and activate with source venv/bin/activate. 
+* Then enter into the Mod5_backend_api and run python manage.py runserver to kick off the server.
+* Open in VS code or other text editor if you'd like to see the code.
+* Fork and clone the frontend. Open it and run this frontend with npm start.
+* From there, create an account, login and have fun looking up recipes for ingredients that you have on hand. Note that you can see a list of all the ingredients on the back of the recipe cards.
+* You can also save a recipe to your recipe book to find later. 
 
 ## Code Examples
 React
